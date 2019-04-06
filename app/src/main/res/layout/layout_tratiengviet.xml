@@ -11,31 +11,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <EditText
-            android:id="@+id/etSearch"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:background="#fff"
-            android:drawableLeft="@drawable/ic_search_black_24dp"
-            android:hint="Nhap tu tieng Viet"
-            android:textSize="17sp" />
-        <TextView
-            android:textColor="#000"
-            android:textSize="30sp"
-            android:layout_below="@+id/etSearch"
-            android:text="gà"
-            android:id="@+id/txtTuTiengViet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:drawableLeft="@drawable/ic_arrow_forward_black_24dp"
-            android:textColor="#000"
-            android:textSize="20sp"
-            android:layout_below="@+id/txtTuTiengViet"
-            android:text="cock;fowl;chickend"
-            android:id="@+id/txtTuTiengAnh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
     </RelativeLayout>
 
 </LinearLayout>
