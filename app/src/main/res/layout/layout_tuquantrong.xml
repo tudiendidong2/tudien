@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+<<<<<<< HEAD
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+=======
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -35,10 +49,19 @@
             android:background="@android:color/holo_orange_dark"
             android:src="@drawable/search" />
 
+>>>>>>> 713034a25fe6727425374f57c76c2a8dc9abdda9
     </RelativeLayout>
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
+<<<<<<< HEAD
+        android:layout_weight="5">
+    </RelativeLayout>
+
+
+
+
+=======
         android:layout_weight="2">
 
         <EditText
@@ -58,4 +81,5 @@
         android:layout_weight="9">
 
     </RelativeLayout>
+>>>>>>> 713034a25fe6727425374f57c76c2a8dc9abdda9
 </LinearLayout>
