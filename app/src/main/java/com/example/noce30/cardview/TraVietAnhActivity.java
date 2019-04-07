@@ -20,9 +20,9 @@ public class TraVietAnhActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_tratiengviet);
 
-        toolbar = (Toolbar) findViewById(R.id.toolBar);
-        getSupportActionBar().setTitle("Text");
-        toolbar.setNavigationIcon(R.drawable.ic_back_second);
+//        toolbar = (Toolbar) findViewById(R.id.toolBar);
+//        getSupportActionBar().setTitle("Text");
+//        toolbar.setNavigationIcon(R.drawable.ic_back_second);
     }
 
     @Override

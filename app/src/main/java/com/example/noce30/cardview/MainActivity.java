@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
         mImageUrls.add(R.drawable.tuquantrong);
         mNames.add("Từ quan trọng");
 
+
         initRecyclerView();
 
     }
