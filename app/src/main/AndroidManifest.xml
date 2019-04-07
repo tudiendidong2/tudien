@@ -20,6 +20,13 @@
         <activity android:name=".TuQuanTrong" />
         <activity android:name=".TuDaTraActivity" />
         <activity android:name=".TraVietAnhActivity" />
+
+
+        <!--Lê Văn Hoàng - cập nhật 14:05 07/04/2019-->
+        <activity
+            android:name=".KetQuaAnhVietActivity"
+            android:theme="@style/KQAVTheme">
+        </activity>
     </application>
 
 </manifest>

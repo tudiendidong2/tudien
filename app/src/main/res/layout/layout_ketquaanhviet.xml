@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Lê Văn Hoàng - cập nhật 14:05 07/04/2019-->
+
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ff6666"
+        android:minHeight="?attr/actionBarSize"
+        android:id="@+id/toolBar">
+
+    </android.support.v7.widget.Toolbar>
+
+
+</LinearLayout>
