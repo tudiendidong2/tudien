@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_around">8dp</dimen>
+    <dimen name="padding_img">4dp</dimen>
+    <dimen name="txt_margin_left">5dp</dimen>
+    <dimen name="txt_margin_top">5dp</dimen>
+    <dimen name="txt_padding_left">15dp</dimen>
+    <dimen name="txt_padding_right">15dp</dimen>
+</resources>

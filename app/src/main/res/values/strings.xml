@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Từ điển</string>
+    <string name="desc_title">Từ của bạn</string>
+    <string name="add_food">add_food</string>
+</resources>
