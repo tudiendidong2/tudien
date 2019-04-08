@@ -1,4 +1,4 @@
-package com.example.noce30.cardview;
+﻿package com.example.noce30.cardview;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -35,7 +35,7 @@ public class DBHelper extends SQLiteOpenHelper {
         if(count == 0 ) {
             this.insertData("hello", "xin chào", "123");
             this.insertData("hi", "xin chào", "123");
-            this.insertData("chicken", "gà huyền", "123");
+            this.insertData("chicken", "gà", "123");
         }
     }
 
