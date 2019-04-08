@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:id="@+id/rlSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:drawableLeft="@drawable/ic_search_black_24dp"
+            android:id="@+id/editText1"
+            android:layout_width="fill_parent"
+            android:layout_height="55dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:hint="Tìm từ"
+            >
+            <requestFocus />
+        </EditText>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl1"
+        android:layout_below="@+id/rlSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+        <CheckBox
+            android:id="@+id/list_view_item_checkbox"
+            android:width="50dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:layout_toRightOf="@id/list_view_item_checkbox"
+            android:id="@+id/txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:drawableRight="@drawable/ic_grade_black_24dp"
+            android:text="angage:thamgia"
+            android:textSize="20dp" />
+        <CheckBox
+            android:layout_below="@id/list_view_item_checkbox"
+            android:id="@+id/ck2"
+            android:width="50dp"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"/>
+
+        <TextView
+            android:layout_below="@id/txt1"
+            android:layout_toRightOf="@id/ck2"
+            android:id="@+id/txtCharacter2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:drawableRight="@drawable/ic_grade_black_24dp"
+            android:text="datemine:quyết định, xác định"
+            android:textSize="20dp" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@+id/rl1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+</RelativeLayout>
