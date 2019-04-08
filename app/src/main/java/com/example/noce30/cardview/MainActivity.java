@@ -112,10 +112,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         }
     }
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.search, menu);
-//        return super.onCreateOptionsMenu(menu);
-//    }
+
 }
 
 

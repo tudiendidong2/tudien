@@ -1,4 +1,4 @@
-﻿package com.example.noce30.cardview;
+package com.example.noce30.cardview;
 
 import android.content.ContentValues;
 import android.content.Context;
