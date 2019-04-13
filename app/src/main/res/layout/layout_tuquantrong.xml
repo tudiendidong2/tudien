@@ -1,82 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:id="@+id/rlSearch"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_orange_dark"
+        android:layout_weight="1"
         android:orientation="horizontal">
-        <EditText
-            android:drawableLeft="@drawable/ic_search_black_24dp"
-            android:id="@+id/editText1"
-            android:layout_width="fill_parent"
-            android:layout_height="55dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:ems="10"
-            android:hint="Tìm từ"
-            >
-            <requestFocus />
-        </EditText>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/back"
+            android:background="@android:color/holo_orange_dark"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="15dp"
+            android:text="Từ quan trọng"
+            android:textColor="@color/title_color"
+            android:textSize="20dp"
+
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_search_black_24dp"
+            android:background="@android:color/holo_orange_dark"/>
 
 
     </RelativeLayout>
     <RelativeLayout
-        android:id="@+id/rl1"
-        android:layout_below="@+id/rlSearch"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-        <CheckBox
-            android:id="@+id/list_view_item_checkbox"
-            android:width="50dp"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="false"
-            android:focusable="false"/>
-
-        <TextView
-            android:layout_toRightOf="@id/list_view_item_checkbox"
-            android:id="@+id/txt1"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <EditText
+            android:id="@+id/etSearch"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="7"
-            android:drawableRight="@drawable/ic_grade_black_24dp"
-            android:text="angage:thamgia"
-            android:textSize="20dp" />
-        <CheckBox
-            android:layout_below="@id/list_view_item_checkbox"
-            android:id="@+id/ck2"
-            android:width="50dp"
-            android:layout_weight="1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:clickable="false"
-            android:focusable="false"/>
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/search_color"
+            android:padding="5dp"
+            android:hint="Nhap tu tieng Viet"
+            android:textSize="17sp"
+            />
 
-        <TextView
-            android:layout_below="@id/txt1"
-            android:layout_toRightOf="@id/ck2"
-            android:id="@+id/txtCharacter2"
+        <ImageButton
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/ic_search_black_24dp"
+            android:background="@color/search_color"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9">
+        <ListView
+            android:id="@+id/listview"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_weight="7"
-            android:drawableRight="@drawable/ic_grade_black_24dp"
-            android:text="datemine:quyết định, xác định"
-            android:textSize="20dp" />
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+        </ListView>
 
     </RelativeLayout>
-    <LinearLayout
-        android:layout_below="@+id/rl1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
 
-    </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>
