@@ -4,38 +4,78 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <EditText
             android:id="@+id/etSearch"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:background="#fff"
+            android:background="@color/search_color"
             android:drawableLeft="@drawable/ic_search_black_24dp"
             android:hint="Nhap tu tieng Viet"
             android:textSize="17sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical">
+
         <TextView
-            android:textColor="#000"
-            android:textSize="30sp"
-            android:layout_below="@+id/etSearch"
-            android:text="gà"
-            android:id="@+id/txtTuTiengViet"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <TextView
-            android:drawableLeft="@drawable/ic_arrow_forward_black_24dp"
             android:textColor="#000"
             android:textSize="20sp"
-            android:layout_below="@+id/txtTuTiengViet"
-            android:text="cock;fowl;chickend"
-            android:id="@+id/txtTuTiengAnh"
+            android:text="Sinh viên"
+            android:id="@+id/txtTuTiengViet1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </RelativeLayout>
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"/>
+
+
+        <TextView
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:text="Trường học"
+            android:id="@+id/txtTuTiengViet2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_alignBottom="@+id/txtTuTiengViet1"
+            android:layout_alignParentLeft="@+id/txtTuTiengViet1"
+            android:layout_alignBaseline="@+id/txtTuTiengViet1"/>
+
+        <TextView
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:text="Từ điển"
+            android:id="@+id/txtTuTiengViet3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_alignBottom="@+id/txtTuTiengViet2"
+            android:layout_alignParentLeft="@+id/txtTuTiengViet2"
+            android:layout_alignBaseline="@+id/txtTuTiengViet2"/>
+
+        <TextView
+            android:textColor="#000"
+            android:textSize="20sp"
+            android:text="Giáo dục"
+            android:id="@+id/txtTuTiengViet4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20px"
+            android:layout_alignBottom="@+id/txtTuTiengViet3"
+            android:layout_alignParentLeft="@+id/txtTuTiengViet3"
+            android:layout_alignBaseline="@+id/txtTuTiengViet3"/>
+
+    </LinearLayout>
 
 </LinearLayout>

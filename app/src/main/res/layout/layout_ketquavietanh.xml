@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#ff6666"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/vaBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_search_black_24dp"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/vaText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ví dụ"
+            android:textSize="45px"
+            android:textColor="#fff" />
+
+        <EditText
+            android:id="@+id/vaNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_note"
+            android:layout_marginLeft="220sp"/>
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableRight="@drawable/ic_star_black_24dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/vaMean"
+            android:text="Ví dụ"
+            android:textSize="40px"
+            android:textColor="#000"
+            android:layout_marginTop="20px"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/vaTrans"
+            android:text="Example"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:textSize="50px"
+            android:textColor="#ffff6666"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
