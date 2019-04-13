@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
+
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
+        android:id="@+id/rlTA"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
         android:orientation="horizontal">
         <TextView
             android:textColor="#000"
@@ -23,7 +26,38 @@
             android:id="@+id/txtTuTiengAnh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/txtEx"
+           android:textColor="#0000ff"
+            android:text="Example:"
+            android:textStyle="italic"
+            android:textSize="30sp"
+            android:layout_below="@+id/txtTuTiengAnh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:textColor="#000"
+            android:hint="mean..."
+            android:textStyle="italic"
+            android:textSize="20sp"
+            android:layout_below="@+id/txtEx"
+            android:id="@+id/txtViDu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTA"
+        android:layout_marginTop="302dp">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:src="@drawable/search_ta" />
+    </LinearLayout>
 
 
 </RelativeLayout>
