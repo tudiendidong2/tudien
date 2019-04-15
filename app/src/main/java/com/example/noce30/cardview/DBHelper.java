@@ -14,6 +14,7 @@ import java.io.ByteArrayOutputStream;
 public class DBHelper extends SQLiteOpenHelper {
     public static final String DATABASE_NAME="Tudien.db";
     public static final String TABLE_NAME="tudien_table";
+    public static final String TABLE_NAME_TU_DA_TRA="tu_da_tra_table";
     public static final String COL_1="ID";
     public static final String COL_2="TU_TA";
     public static final String COL_3="TU_TV";
@@ -26,7 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private SQLiteDatabase database;
 
     public DBHelper(Context context) {
-        super(context, DATABASE_NAME, null, 4);
+        super(context, DATABASE_NAME, null, 5);
         context1 = context.getApplicationContext();
     }
     //open db
@@ -38,6 +39,7 @@ public class DBHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + TABLE_NAME +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,TU_TA TEXT,TU_TV TEXT,HINH BLOB, VI_DU TEXT )");
+        db.execSQL("create table " + TABLE_NAME_TU_DA_TRA +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,TU_TA TEXT,TU_TV TEXT,HINH BLOB, VI_DU TEXT )");
     }
 
     @Override
@@ -50,7 +52,7 @@ public class DBHelper extends SQLiteOpenHelper {
         int count = this.getCount();
         if(count == 0 ) {
             this.insertData("hello", "xin chao", this.getImagePath(R.drawable.hello), "In this morning, He say hello me.");
-            this.insertData("tiger", "con ho", this.getImagePath(R.drawable.hi), "In this morning, He meet tiger in the zoo.");
+            this.insertData("tiger", "con ho", this.getImagePath(R.drawable.tiger), "In this morning, He meet tiger in the zoo.");
             this.insertData("chicken", "con ga", this.getImagePath(R.drawable.chicken), "In this diner, we eat chiken.");
         }
     }
