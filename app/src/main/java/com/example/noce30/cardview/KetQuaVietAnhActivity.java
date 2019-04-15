@@ -31,15 +31,18 @@ public class KetQuaVietAnhActivity extends AppCompatActivity {
 
         StringBuffer buffer = new StringBuffer();
         while (res.moveToNext()) {
-            this.showText(res.getString(1), res.getString(2), res.getString(4));
+            this.showText(res.getString(1), res.getString(2), res.getString(2), res.getString(4));
         }
     }
 
-    public void showText(String anh,String viet, String viDu){
+    public void showText(String anh,String showviet, String viet, String viDu){
+        TextView textViet = (TextView) findViewById(R.id.vaText);
+
         TextView textTV = (TextView)findViewById(R.id.txtTV);
         TextView textTA = (TextView)findViewById(R.id.txtTA);
         TextView textVD = (TextView)findViewById(R.id.txtVD);
 
+        textViet.setText(showviet);
         textTV.setText(viet);
         textTA.setText(anh);
         textVD.setText(viDu);

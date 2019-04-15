@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -26,20 +25,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ví dụ"
-            android:textSize="45px"
-            android:textColor="#fff" />
+            android:textColor="#fff"
+            android:textSize="45px" />
 
         <EditText
             android:id="@+id/vaNote"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableRight="@drawable/ic_note"
-            android:layout_marginLeft="220sp"/>
+            android:layout_marginLeft="210sp"
+            android:drawableRight="@drawable/ic_note" />
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:drawableRight="@drawable/ic_star_black_24dp"/>
+            android:layout_marginLeft="5px"
+            android:drawableRight="@drawable/ic_star_black_24dp" />
 
     </LinearLayout>
 
@@ -50,39 +50,40 @@
         android:orientation="vertical">
 
         <TextView
-            android:textSize="30sp"
             android:id="@+id/txtTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
             android:hint="Tu tieng viet"
             android:textColor="#000"
-            android:layout_marginTop="20px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textSize="30sp" />
 
         <TextView
-        android:id="@+id/txtTA"
-        android:hint="Nghia tieng anh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:textSize="30sp"
-        />
-        <TextView
-            android:layout_below="@id/txtTA"
-            android:id="@+id/txtTitleVD"
-            android:text="Ví dụ :"
+            android:id="@+id/txtTA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
-            android:textSize="40sp"
-            android:textColor="#ffff6666"/>
+            android:hint="Nghia tieng anh"
+            android:textColor="#ffff6666"
+            android:textSize="40sp" />
+
         <TextView
-            android:layout_below="@id/txtTitleVD"
-            android:id="@+id/txtVD"
-            android:hint="Nghia tieng anh..."
+            android:id="@+id/txtTitleVD"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30sp"
-           />
+            android:layout_below="@id/txtTA"
+            android:layout_marginTop="40dp"
+            android:text="Ví dụ :"
+            android:textColor="#e2d3"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/txtVD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTitleVD"
+            android:hint="Nghia tieng anh..."
+            android:textSize="30sp" />
 
     </RelativeLayout>
 
