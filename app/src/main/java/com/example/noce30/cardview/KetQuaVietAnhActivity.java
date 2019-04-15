@@ -3,6 +3,7 @@ package com.example.noce30.cardview;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -12,12 +13,25 @@ import android.widget.TextView;
 
 public class KetQuaVietAnhActivity extends AppCompatActivity {
     DBHelper db;
+
+    Typeface typeface;
+    TextView textViet, textTV, textTA, textVD;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         db = new DBHelper(this);
         setContentView(R.layout.layout_ketquavietanh);
         this.showSearchResult();
+
+
+        //fonts
+        typeface = Typeface.createFromAsset(getAssets(), "fonts/times.ttf");
+        textViet.setTypeface(typeface);
+        textTV.setTypeface(typeface);
+        textTA.setTypeface(typeface);
+        textVD.setTypeface(typeface);
+
     }
 
     public void showSearchResult() {
@@ -36,11 +50,11 @@ public class KetQuaVietAnhActivity extends AppCompatActivity {
     }
 
     public void showText(String anh,String showviet, String viet, String viDu){
-        TextView textViet = (TextView) findViewById(R.id.vaText);
+        textViet = (TextView) findViewById(R.id.vaText);
 
-        TextView textTV = (TextView)findViewById(R.id.txtTV);
-        TextView textTA = (TextView)findViewById(R.id.txtTA);
-        TextView textVD = (TextView)findViewById(R.id.txtVD);
+        textTV = (TextView)findViewById(R.id.txtTV);
+        textTA = (TextView)findViewById(R.id.txtTA);
+        textVD = (TextView)findViewById(R.id.txtVD);
 
         textViet.setText(showviet);
         textTV.setText(viet);
