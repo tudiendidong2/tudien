@@ -19,13 +19,14 @@ public class DBHelper extends SQLiteOpenHelper {
     public static final String COL_3="TU_TV";
     public static final String COL_4="HINH";
     public static final String COL_5="VI_DU";
+    public static final String COL_6="VI_DU_TV";
 
     Context context1;
     static long dbInsert ;
     private SQLiteDatabase database;
 
     public DBHelper(Context context) {
-        super(context, DATABASE_NAME, null, 3);
+        super(context, DATABASE_NAME, null, 4);
         context1 = context.getApplicationContext();
     }
     //open db
@@ -48,9 +49,9 @@ public class DBHelper extends SQLiteOpenHelper {
     public void createDefaultNotesIfNeed() {
         int count = this.getCount();
         if(count == 0 ) {
-            this.insertData("hello", "xin chào", this.getImagePath(R.drawable.hello), "In this morning, He say hello me.");
-            this.insertData("hi", "xin chào", this.getImagePath(R.drawable.hi), "In this morning, He say hi me.");
-            this.insertData("chicken", "gà", this.getImagePath(R.drawable.chicken), "In this diner, we eat chiken.");
+            this.insertData("hello", "xin chao", this.getImagePath(R.drawable.hello), "In this morning, He say hello me.");
+            this.insertData("tiger", "con ho", this.getImagePath(R.drawable.hi), "In this morning, He meet tiger in the zoo.");
+            this.insertData("chicken", "con ga", this.getImagePath(R.drawable.chicken), "In this diner, we eat chiken.");
         }
     }
 
@@ -80,10 +81,17 @@ public class DBHelper extends SQLiteOpenHelper {
         else
             return true;
     }
-
+//query tieng anh- viet
     public Cursor getAllData(String keyWord) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from " + TABLE_NAME + " where TU_TA = ? ", new String[] {keyWord});
+        return res;
+    }
+
+    //query tieng viet- anh
+    public Cursor getTV(String keyWord) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME + " where TU_TV = ? ", new String[] {keyWord});
         return res;
     }
 

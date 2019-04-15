@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".SplashScreenActivity"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,6 +25,7 @@
         <activity android:name=".TraVietAnhActivity" />
         <activity android:name=".TiengAnhActivity" />
         <activity android:name=".ImageActivity" />
+        <activity android:name=".KetQuaVietAnhActivity" />
     </application>
 
 </manifest>
