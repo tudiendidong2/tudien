@@ -13,6 +13,7 @@
         android:background="#ff6666"
         android:orientation="horizontal">
 
+
         <EditText
             android:id="@+id/vaBack"
             android:layout_width="wrap_content"
@@ -27,6 +28,7 @@
             android:text="Ví dụ"
             android:textColor="#fff"
             android:textSize="45px" />
+
 
         <EditText
             android:id="@+id/vaNote"
