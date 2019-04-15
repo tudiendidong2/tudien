@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="7"
-            android:text="hello"
+            android:hint="từ đã tra"
             android:textSize="20dp" />
 
         <ImageButton

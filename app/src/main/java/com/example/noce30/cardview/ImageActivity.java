@@ -32,6 +32,7 @@ import java.util.Date;
 import java.util.Locale;
 import com.squareup.picasso.Picasso;
 
+import id.zelory.compressor.Compressor;
 import me.drakeet.materialdialog.MaterialDialog;
 
 public class ImageActivity extends AppCompatActivity {
@@ -60,6 +61,7 @@ public class ImageActivity extends AppCompatActivity {
             Bitmap bitmap = BitmapFactory.decodeByteArray(image, 0, image.length);
             imgvPhoto.setImageBitmap(bitmap);
         }
+        initViews();
     }
     public void initViews(){
         btnPickPhoto = (com.rey.material.widget.Button)findViewById(R.id.btn_pick_photo);
@@ -145,46 +147,46 @@ public class ImageActivity extends AppCompatActivity {
     }
 
 
-    //@Override
-//    protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
-//        super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
-//
-//        switch (requestCode) {
-//            case SELECT_PHOTO:
-//                if (resultCode == RESULT_OK) {
-//
-//                    Uri imageUri = imageReturnedIntent.getData();
-//                    String selectedImagePath = getPath(imageUri);
-//
-//                    String dateTime = getCurrentTime();
-//                    db.saveImagePath(selectedImagePath);
-//
-//                    String retrieveImage =db.getImagePath();
-//                    File newImageFile = new File(retrieveImage);
-//
-//                    Picasso.with(ImageActivity.this).load(Uri.fromFile(newImageFile)).into(imgvPhoto);
-//
-//
-////                    File f = new File(selectedImagePath);
-////                    Bitmap bmp = Compressor.getDefault(this).compressToBitmap(f);
-////
-////                    imgvPhoto.setImageBitmap(bmp);
-//
-//                }
-//                break;
-//
-//            case CAPTURE_PHOTO:
-//                if (resultCode == RESULT_OK) {
-//
-//                    Bitmap bmp = imageReturnedIntent.getExtras().getParcelable("data");
-//
-//                    imgvPhoto.setImageBitmap(bmp);
-//
-//                }
-//
-//                break;
-//        }
-//    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
+        super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
+
+        switch (requestCode) {
+            case SELECT_PHOTO:
+                if (resultCode == RESULT_OK) {
+
+                    Uri imageUri = imageReturnedIntent.getData();
+                    String selectedImagePath = getPath(imageUri);
+
+                    String dateTime = getCurrentTime();
+                    //db.saveImagePath(selectedImagePath);
+
+                    String retrieveImage ="";
+                    File newImageFile = new File(retrieveImage);
+
+                    Picasso.with(ImageActivity.this).load(Uri.fromFile(newImageFile)).into(imgvPhoto);
+
+
+                    File f = new File(selectedImagePath);
+                    Bitmap bmp = Compressor.getDefault(this).compressToBitmap(f);
+
+                    imgvPhoto.setImageBitmap(bmp);
+
+                }
+                break;
+
+            case CAPTURE_PHOTO:
+                if (resultCode == RESULT_OK) {
+
+                    Bitmap bmp = imageReturnedIntent.getExtras().getParcelable("data");
+
+                    imgvPhoto.setImageBitmap(bmp);
+
+                }
+
+                break;
+        }
+    }
     public String getPath(Uri uri) {
         // just some safety built in
         if (uri == null) {
