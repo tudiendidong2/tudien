@@ -3,7 +3,6 @@ package com.example.noce30.cardview;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -14,24 +13,12 @@ import android.widget.TextView;
 public class TiengAnhActivity extends AppCompatActivity {
     DBHelper db;
 
-    Typeface typeface;
-    TextView textEnglish, textVN, textVD, textEX;
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         db = new DBHelper(this);
         setContentView(R.layout.layout_tienganh);
         this.showSearchResult();
-
-        //fonts
-        typeface = Typeface.createFromAsset(getAssets(), "fonts/times.ttf");
-        textEnglish = (TextView)findViewById(R.id.txtEx);
-
-        textEnglish.setTypeface(typeface);
-        textVN.setTypeface(typeface);
-        textEX.setTypeface(typeface);
-        textVD.setTypeface(typeface);
     }
 
     public void showSearchResult() {
@@ -50,9 +37,9 @@ public class TiengAnhActivity extends AppCompatActivity {
     }
 
     public void showText(String anh,String viet, String viDu){
-        textEnglish = (TextView)findViewById(R.id.txtTuTiengViet);
-        textVN = (TextView)findViewById(R.id.txtTuTiengAnh);
-        textVD = (TextView)findViewById(R.id.txtViDu);
+        TextView textEnglish = (TextView)findViewById(R.id.txtTuTiengViet);
+        TextView textVN = (TextView)findViewById(R.id.txtTuTiengAnh);
+        TextView textVD = (TextView)findViewById(R.id.txtViDu);
 
         textEnglish.setText(anh);
         textVN.setText(viet);
