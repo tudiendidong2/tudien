@@ -1,38 +1,40 @@
 package com.example.noce30.cardview.Model;
 
+import android.graphics.Bitmap;
+
 public class TuDaTra {
-    public TuDaTra(boolean isMale, String mName, String mNumber) {
-        this.isMale = isMale;
-
-        this.mName = mName;
-        this.mNumber = mNumber;
+    public TuDaTra(String TA, String TV, byte[] img) {
+        this.TA = TA;
+        this.TV = TV;
+        this.img = img;
     }
 
-    public boolean isMale() {
-        return isMale;
+    public String getTA() {
+        return TA;
     }
 
-    public void setMale(boolean male) {
-        isMale = male;
+    public void setTA(String TA) {
+        this.TA = TA;
     }
 
-    public String getmName() {
-        return mName;
+    public String getTV() {
+        return TV;
     }
 
-    public void setmName(String mName) {
-        this.mName = mName;
+    public void setTV(String TV) {
+        this.TV = TV;
     }
 
-    public String getmNumber() {
-        return mNumber;
+    public byte[] getImg() {
+        return img;
     }
 
-    public void setmNumber(String mNumber) {
-        this.mNumber = mNumber;
+    public void setImg(byte[] img) {
+        this.img = img;
     }
 
-    private boolean isMale;
-    private String mName;
-    private String mNumber;
+
+    private String TA;
+    private String TV;
+    private byte[] img;
 }

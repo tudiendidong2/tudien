@@ -29,7 +29,6 @@ public class KetQuaVietAnhActivity extends AppCompatActivity {
             return;
         }
 
-        StringBuffer buffer = new StringBuffer();
         while (res.moveToNext()) {
             this.showText(res.getString(1), res.getString(2), res.getString(2), res.getString(4));
         }

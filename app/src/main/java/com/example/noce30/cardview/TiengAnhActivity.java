@@ -33,6 +33,10 @@ public class TiengAnhActivity extends AppCompatActivity {
         StringBuffer buffer = new StringBuffer();
         while (res.moveToNext()) {
             this.showText(res.getString(1), res.getString(2), res.getString(4));
+            boolean isExist = db.kiemTraDataTDT(keySearch);
+            if(!isExist) {
+                db.insertDataTDT(res.getString(1), res.getString(2), res.getBlob(3), res.getString(4));
+            }
         }
     }
 

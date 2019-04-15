@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlSearch"
+        android:layout_marginTop="1dp"
+        android:orientation="horizontal">
+
+        <!--<CheckBox-->
+            <!--android:id="@+id/list_view_item_checkbox"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="2"-->
+            <!--android:width="0dp"-->
+            <!--android:clickable="false"-->
+            <!--android:focusable="false" />-->
+        <ImageView
+            android:id="@+id/img_tudatra"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_weight="2"
+            android:width="0dp" />
+
+        <TextView
+            android:id="@+id/txtTDTTA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="7"
+            android:hint="từ đã tra"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonMP3"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="2"
+            app:srcCompat="@drawable/ic_speaker_24" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_grade_black_24dp" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -47,6 +47,7 @@ public class DBHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+TABLE_NAME);
         onCreate(db);
     }
+
     //insert tu
     public void createDefaultNotesIfNeed() {
         int count = this.getCount();
@@ -83,7 +84,30 @@ public class DBHelper extends SQLiteOpenHelper {
         else
             return true;
     }
-//query tieng anh- viet
+
+    //insert tu da tra
+    public boolean insertDataTDT(String anh, String viet, byte[] hinh, String viDu) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COL_2,anh);
+        contentValues.put(COL_3,viet);
+        contentValues.put(COL_4,hinh);
+        contentValues.put(COL_5,viDu);
+        long result = db.insert(TABLE_NAME_TU_DA_TRA,null ,contentValues);
+        if(result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    //kiem tra tu da tra
+    public boolean kiemTraDataTDT(String anh) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME_TU_DA_TRA + " where TU_TA = ? ", new String[] {anh});
+        return ((res != null) && (res.getCount() > 0));
+    }
+
+    //query tieng anh- viet
     public Cursor getAllData(String keyWord) {
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor res = db.rawQuery("select * from " + TABLE_NAME + " where TU_TA = ? ", new String[] {keyWord});
@@ -106,6 +130,13 @@ public class DBHelper extends SQLiteOpenHelper {
         contentValues.put(COL_4,marks);
         db.update(TABLE_NAME, contentValues, "ID = ?",new String[] { id });
         return true;
+    }
+
+    //query tieng anh- viet
+    public Cursor getAllDataTDT() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME_TU_DA_TRA , null);
+        return res;
     }
 
     public Integer deleteData (String id) {
