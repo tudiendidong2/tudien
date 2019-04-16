@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textSize="30sp"
+        android:id="@+id/txtTV"
+        android:hint="Tu tieng viet"
+        android:textColor="#000"
+        android:layout_marginTop="20px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/txtTA"
+        android:hint="Nghia tieng anh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="30sp"
+        />
+    <TextView
+        android:layout_below="@id/txtTA"
+        android:id="@+id/txtTitleVD"
+        android:text="Ví dụ :"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="40sp"
+        android:textColor="#ffff6666"/>
+    <TextView
+        android:layout_below="@id/txtTitleVD"
+        android:id="@+id/txtVD"
+        android:hint="Nghia tieng anh..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        />
+
+
+</LinearLayout>

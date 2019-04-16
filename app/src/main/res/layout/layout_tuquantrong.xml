@@ -12,6 +12,7 @@
         android:orientation="horizontal">
 
         <ImageButton
+            android:id="@+id/btnBackTuQuanTrong"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="5dp"
@@ -31,6 +32,7 @@
             android:textStyle="bold" />
 
         <ImageButton
+            android:id="@+id/btnTimKiemBK"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_marginLeft="320dp"
@@ -45,17 +47,15 @@
         android:layout_height="0dp"
         android:layout_weight="2">
         <EditText
-            android:id="@+id/etSearch"
+            android:id="@+id/etSearchTV"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
+            android:layout_height="45dp"
             android:background="@color/search_color"
-            android:padding="5dp"
             android:hint="Nhap tu tieng Viet"
-            android:textSize="17sp"
-            />
+            android:textSize="17sp" />
 
         <ImageButton
+            android:id="@+id/btnTimKiemTQT"
             android:layout_width="60dp"
             android:layout_height="50dp"
             android:layout_marginLeft="320dp"

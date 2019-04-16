@@ -20,6 +20,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".TuCuaBanActivity" />
+        <activity android:name=".KetQuaTuQuanTrong"/>
+        <activity android:name=".TraAnhVietActivity"></activity>
+        <activity android:name=".KetQuaTraAnhViet"></activity>
         <activity android:name=".TuQuanTrong" />
         <activity android:name=".TuDaTraActivity" />
         <activity android:name=".TraVietAnhActivity" />

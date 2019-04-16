@@ -27,7 +27,7 @@ public class DBHelper extends SQLiteOpenHelper {
     private SQLiteDatabase database;
 
     public DBHelper(Context context) {
-        super(context, DATABASE_NAME, null, 5);
+        super(context, DATABASE_NAME, null, 6);
         context1 = context.getApplicationContext();
     }
     //open db

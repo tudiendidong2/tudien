@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+        <EditText
+            android:id="@+id/edtSearchAV"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:background="@color/search_color"
+            android:hint="Tra tu Anh - Viet"
+            android:textSize="17sp" />
+
+        <ImageButton
+            android:id="@+id/btnTimKiemTTAV"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="320dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_search_black_24dp"
+            android:background="@color/search_color"/>
+    </RelativeLayout>
+
+</LinearLayout>
